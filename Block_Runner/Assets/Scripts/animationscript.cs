@@ -15,7 +15,7 @@ public class animationscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animator.SetBool("idle", true);
+           animator.SetBool("idle", true);
        if (Input.GetKey("w"))
        {
            animator.SetBool("run", true);
@@ -30,8 +30,11 @@ public class animationscript : MonoBehaviour
        }
        if (!Input.GetKey("space") )
        {
-           //animator.SetBool("run", true);
            animator.SetBool("jump", false);
+       }
+       if (Input.GetKey("s"))
+       {
+           animator.SetBool("run", true);
        }
       
     }
